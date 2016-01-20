@@ -1,4 +1,4 @@
-<p align="center" >
+<p align="center">
   <img src="LOGO.png" title="In And Out logo" float=left height="120px" width="120px">
 </p>
 
@@ -24,23 +24,19 @@ This class has three methods.
 
 import Foundation
 
-class AuthManager: NSObject
-{
+class AuthManager {
     private static var userDefaults = NSUserDefaults.standardUserDefaults()
     private static let signInKey = "SIGNIN"
 
-    class func isSignedIn() -> Bool
-    {
+    class func isSignedIn() -> Bool {
         return userDefaults.boolForKey(signInKey)
     }
 
-    class func signIn()
-    {
+    class func signIn() {
         userDefaults.setBool(true, forKey: signInKey)
     }
 
-    class func signOut()
-    {
+    class func signOut() {
         userDefaults.setBool(false, forKey: signInKey)
     }
 }
@@ -59,10 +55,8 @@ When the app is launched following method is executed while showing splash view 
 //  AppDelegate.swift
 //  InAndOut
 
-func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
-{
-    if !AuthManager.isSignedIn()
-    {
+func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    if !AuthManager.isSignedIn() {
         window?.rootViewController = storyboard.instantiateViewControllerWithIdentifier("SignInViewController") as! SignInViewController
     }
 
@@ -84,10 +78,8 @@ Signing out is very easy. Just change the status to signed out and set the rootV
 //  MainViewController.swift
 //  InAndOut
 
-@IBAction func trySignOut()
-{
+@IBAction func trySignOut() {
     AuthManager.signOut()
-
     (UIApplication.sharedApplication().delegate as! AppDelegate).window?.rootViewController = storyboard?.instantiateViewControllerWithIdentifier("SignInViewController") as! SignInViewController
 }
 
