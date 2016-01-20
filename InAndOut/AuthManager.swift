@@ -8,23 +8,19 @@
 
 import Foundation
 
-class AuthManager: NSObject
-{
+class AuthManager {
     private static var userDefaults = NSUserDefaults.standardUserDefaults()
     private static let signInKey = "SIGNIN"
-    
-    class func isSignedIn() -> Bool
-    {
+
+    class func isSignedIn() -> Bool {
         return userDefaults.boolForKey(signInKey)
     }
-    
-    class func signIn()
-    {
+
+    class func signIn() {
         userDefaults.setBool(true, forKey: signInKey)
     }
-    
-    class func signOut()
-    {
+
+    class func signOut() {
         userDefaults.setBool(false, forKey: signInKey)
     }
 }
