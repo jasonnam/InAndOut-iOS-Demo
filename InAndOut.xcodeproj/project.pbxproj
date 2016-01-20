@@ -10,7 +10,6 @@
 		EC2F5D3C1B9C8A8800FC9120 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2F5D3B1B9C8A8800FC9120 /* AppDelegate.swift */; };
 		EC2F5D431B9C8A8800FC9120 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC2F5D421B9C8A8800FC9120 /* Images.xcassets */; };
 		EC2F5D461B9C8A8800FC9120 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC2F5D441B9C8A8800FC9120 /* LaunchScreen.xib */; };
-		EC2F5D521B9C8A8800FC9120 /* InAndOutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2F5D511B9C8A8800FC9120 /* InAndOutTests.swift */; };
 		EC2F5D5F1B9C8B4100FC9120 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2F5D5B1B9C8B4100FC9120 /* AuthManager.swift */; };
 		EC2F5D601B9C8B4100FC9120 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC2F5D5C1B9C8B4100FC9120 /* InfoPlist.strings */; };
 		EC2F5D611B9C8B4100FC9120 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2F5D5D1B9C8B4100FC9120 /* MainViewController.swift */; };
@@ -18,25 +17,12 @@
 		EC2F5D651B9C8C3400FC9120 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC2F5D671B9C8C3400FC9120 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		EC2F5D4C1B9C8A8800FC9120 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EC2F5D2E1B9C8A8800FC9120 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EC2F5D351B9C8A8800FC9120;
-			remoteInfo = InAndOut;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		EC2F5D361B9C8A8800FC9120 /* InAndOut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InAndOut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC2F5D3A1B9C8A8800FC9120 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC2F5D3B1B9C8A8800FC9120 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC2F5D421B9C8A8800FC9120 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EC2F5D451B9C8A8800FC9120 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		EC2F5D4B1B9C8A8800FC9120 /* InAndOutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InAndOutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC2F5D501B9C8A8800FC9120 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EC2F5D511B9C8A8800FC9120 /* InAndOutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAndOutTests.swift; sourceTree = "<group>"; };
 		EC2F5D5B1B9C8B4100FC9120 /* AuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		EC2F5D5C1B9C8B4100FC9120 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		EC2F5D5D1B9C8B4100FC9120 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -52,13 +38,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EC2F5D481B9C8A8800FC9120 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -66,7 +45,6 @@
 			isa = PBXGroup;
 			children = (
 				EC2F5D381B9C8A8800FC9120 /* InAndOut */,
-				EC2F5D4E1B9C8A8800FC9120 /* InAndOutTests */,
 				EC2F5D371B9C8A8800FC9120 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,7 +53,6 @@
 			isa = PBXGroup;
 			children = (
 				EC2F5D361B9C8A8800FC9120 /* InAndOut.app */,
-				EC2F5D4B1B9C8A8800FC9120 /* InAndOutTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,23 +81,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		EC2F5D4E1B9C8A8800FC9120 /* InAndOutTests */ = {
-			isa = PBXGroup;
-			children = (
-				EC2F5D511B9C8A8800FC9120 /* InAndOutTests.swift */,
-				EC2F5D4F1B9C8A8800FC9120 /* Supporting Files */,
-			);
-			path = InAndOutTests;
-			sourceTree = "<group>";
-		};
-		EC2F5D4F1B9C8A8800FC9120 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				EC2F5D501B9C8A8800FC9120 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,24 +101,6 @@
 			productReference = EC2F5D361B9C8A8800FC9120 /* InAndOut.app */;
 			productType = "com.apple.product-type.application";
 		};
-		EC2F5D4A1B9C8A8800FC9120 /* InAndOutTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EC2F5D581B9C8A8800FC9120 /* Build configuration list for PBXNativeTarget "InAndOutTests" */;
-			buildPhases = (
-				EC2F5D471B9C8A8800FC9120 /* Sources */,
-				EC2F5D481B9C8A8800FC9120 /* Frameworks */,
-				EC2F5D491B9C8A8800FC9120 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				EC2F5D4D1B9C8A8800FC9120 /* PBXTargetDependency */,
-			);
-			name = InAndOutTests;
-			productName = InAndOutTests;
-			productReference = EC2F5D4B1B9C8A8800FC9120 /* InAndOutTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -171,10 +113,6 @@
 				TargetAttributes = {
 					EC2F5D351B9C8A8800FC9120 = {
 						CreatedOnToolsVersion = 6.4;
-					};
-					EC2F5D4A1B9C8A8800FC9120 = {
-						CreatedOnToolsVersion = 6.4;
-						TestTargetID = EC2F5D351B9C8A8800FC9120;
 					};
 				};
 			};
@@ -192,7 +130,6 @@
 			projectRoot = "";
 			targets = (
 				EC2F5D351B9C8A8800FC9120 /* InAndOut */,
-				EC2F5D4A1B9C8A8800FC9120 /* InAndOutTests */,
 			);
 		};
 /* End PBXProject section */
@@ -206,13 +143,6 @@
 				EC2F5D461B9C8A8800FC9120 /* LaunchScreen.xib in Resources */,
 				EC2F5D431B9C8A8800FC9120 /* Images.xcassets in Resources */,
 				EC2F5D651B9C8C3400FC9120 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EC2F5D491B9C8A8800FC9120 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,23 +160,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EC2F5D471B9C8A8800FC9120 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EC2F5D521B9C8A8800FC9120 /* InAndOutTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		EC2F5D4D1B9C8A8800FC9120 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EC2F5D351B9C8A8800FC9120 /* InAndOut */;
-			targetProxy = EC2F5D4C1B9C8A8800FC9120 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		EC2F5D441B9C8A8800FC9120 /* LaunchScreen.xib */ = {
@@ -372,36 +286,6 @@
 			};
 			name = Release;
 		};
-		EC2F5D591B9C8A8800FC9120 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = InAndOutTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jasonnam.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InAndOut.app/InAndOut";
-			};
-			name = Debug;
-		};
-		EC2F5D5A1B9C8A8800FC9120 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = InAndOutTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jasonnam.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InAndOut.app/InAndOut";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -419,15 +303,6 @@
 			buildConfigurations = (
 				EC2F5D561B9C8A8800FC9120 /* Debug */,
 				EC2F5D571B9C8A8800FC9120 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EC2F5D581B9C8A8800FC9120 /* Build configuration list for PBXNativeTarget "InAndOutTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EC2F5D591B9C8A8800FC9120 /* Debug */,
-				EC2F5D5A1B9C8A8800FC9120 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
