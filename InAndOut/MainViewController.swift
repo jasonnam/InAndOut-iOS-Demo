@@ -8,10 +8,10 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
-    @IBOutlet weak var logo: UIImageView! = nil
-    @IBOutlet weak var visitWebsiteButton: UIButton! = nil
-    @IBOutlet weak var signOutButton: UIButton! = nil
+final class MainViewController: UIViewController {
+    @IBOutlet private weak var logo: UIImageView! = nil
+    @IBOutlet private weak var visitWebsiteButton: UIButton! = nil
+    @IBOutlet private weak var signOutButton: UIButton! = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,12 +21,12 @@ class MainViewController: UIViewController {
         signOutButton.alpha = 0
     }
 
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(true)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
 
-        UIView.animateWithDuration(0.4, delay: 0, options: UIViewAnimationCurve.EaseIn.toOptions(), animations: {
+        UIView.animate(withDuration: 0.4, delay: 0, options: UIViewAnimationCurve.easeIn.options, animations: {
             self.logo.alpha = 1
-        }, completion: { (finished: Bool) in
+        }, completion: { finished in
             if finished {
                 self.showVisitWebsiteButton()
             }
@@ -34,9 +34,9 @@ class MainViewController: UIViewController {
     }
 
     private func showVisitWebsiteButton() {
-        UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationCurve.EaseIn.toOptions(), animations: {
+        UIView.animate(withDuration: 0.2, delay: 0, options: UIViewAnimationCurve.easeIn.options, animations: {
             self.visitWebsiteButton.alpha = 1
-        }, completion: { (finished: Bool) in
+        }, completion: { finished in
             if finished {
                 self.showSignOutButton()
             }
@@ -44,17 +44,19 @@ class MainViewController: UIViewController {
     }
 
     private func showSignOutButton() {
-        UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationCurve.EaseIn.toOptions(), animations: {
+        UIView.animate(withDuration: 0.2, delay: 0, options: UIViewAnimationCurve.easeIn.options, animations: {
             self.signOutButton.alpha = 1
         }, completion: nil)
     }
 
     @IBAction func trySignOut() {
         AuthManager.signOut()
-        (UIApplication.sharedApplication().delegate as! AppDelegate).window?.rootViewController = storyboard?.instantiateViewControllerWithIdentifier("SignInViewController") as! SignInViewController
+        (UIApplication.shared.delegate as? AppDelegate)?.window?.rootViewController = storyboard?.instantiateViewController(withIdentifier: "SignInViewController") as? SignInViewController
     }
 
     @IBAction func visitWebsite() {
-        UIApplication.sharedApplication().openURL(NSURL(string: "http://www.jasonnam.com")!)
+        if let URL = URL(string: "http://www.jasonnam.com") {
+            UIApplication.shared.openURL(URL)
+        }
     }
 }

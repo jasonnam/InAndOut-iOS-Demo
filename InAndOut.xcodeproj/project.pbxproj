@@ -15,6 +15,7 @@
 		EC2F5D611B9C8B4100FC9120 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2F5D5D1B9C8B4100FC9120 /* MainViewController.swift */; };
 		EC2F5D621B9C8B4100FC9120 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2F5D5E1B9C8B4100FC9120 /* SignInViewController.swift */; };
 		EC2F5D651B9C8C3400FC9120 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC2F5D671B9C8C3400FC9120 /* Main.storyboard */; };
+		EC8F12701D916084002D8BF2 /* UIViewAnimationCurveExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8F126F1D916084002D8BF2 /* UIViewAnimationCurveExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		EC2F5D5D1B9C8B4100FC9120 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		EC2F5D5E1B9C8B4100FC9120 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		EC2F5D661B9C8C3400FC9120 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EC8F126F1D916084002D8BF2 /* UIViewAnimationCurveExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewAnimationCurveExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				EC2F5D5E1B9C8B4100FC9120 /* SignInViewController.swift */,
 				EC2F5D5D1B9C8B4100FC9120 /* MainViewController.swift */,
 				EC2F5D5B1B9C8B4100FC9120 /* AuthManager.swift */,
+				EC8F126F1D916084002D8BF2 /* UIViewAnimationCurveExtension.swift */,
 				EC2F5D421B9C8A8800FC9120 /* Images.xcassets */,
 				EC2F5D391B9C8A8800FC9120 /* Supporting Files */,
 			);
@@ -108,11 +111,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Jason Nam";
 				TargetAttributes = {
 					EC2F5D351B9C8A8800FC9120 = {
 						CreatedOnToolsVersion = 6.4;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -153,6 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC8F12701D916084002D8BF2 /* UIViewAnimationCurveExtension.swift in Sources */,
 				EC2F5D5F1B9C8B4100FC9120 /* AuthManager.swift in Sources */,
 				EC2F5D3C1B9C8A8800FC9120 /* AppDelegate.swift in Sources */,
 				EC2F5D621B9C8B4100FC9120 /* SignInViewController.swift in Sources */,
@@ -195,8 +200,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -240,8 +247,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -260,6 +269,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -272,6 +282,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jasonnam.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -283,6 +294,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jasonnam.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

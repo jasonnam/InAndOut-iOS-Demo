@@ -9,13 +9,12 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+final class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
-    var storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        if !AuthManager.isSignedIn() {
-            window?.rootViewController = storyboard.instantiateViewControllerWithIdentifier("SignInViewController") as! SignInViewController
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        if !AuthManager.signedIn {
+            window?.rootViewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SignInViewController") as? SignInViewController
         }
 
         return true
