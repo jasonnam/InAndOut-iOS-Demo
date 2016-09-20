@@ -24,20 +24,20 @@ This class has three methods.
 
 import Foundation
 
-class AuthManager {
-    private static var userDefaults = NSUserDefaults.standardUserDefaults()
+final class AuthManager {
+    private static var userDefaults = UserDefaults.standard
     private static let signInKey = "SIGNIN"
 
-    class func isSignedIn() -> Bool {
-        return userDefaults.boolForKey(signInKey)
+    class var signedIn: Bool {
+        return userDefaults.bool(forKey: signInKey)
     }
 
     class func signIn() {
-        userDefaults.setBool(true, forKey: signInKey)
+        userDefaults.set(true, forKey: signInKey)
     }
 
     class func signOut() {
-        userDefaults.setBool(false, forKey: signInKey)
+        userDefaults.set(false, forKey: signInKey)
     }
 }
 
@@ -55,9 +55,9 @@ When the app is launched following method is executed while showing splash view 
 //  AppDelegate.swift
 //  InAndOut
 
-func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-    if !AuthManager.isSignedIn() {
-        window?.rootViewController = storyboard.instantiateViewControllerWithIdentifier("SignInViewController") as! SignInViewController
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    if !AuthManager.signedIn {
+        window?.rootViewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SignInViewController") as? SignInViewController
     }
 
     return true
@@ -80,7 +80,7 @@ Signing out is very easy. Just change the status to signed out and set the rootV
 
 @IBAction func trySignOut() {
     AuthManager.signOut()
-    (UIApplication.sharedApplication().delegate as! AppDelegate).window?.rootViewController = storyboard?.instantiateViewControllerWithIdentifier("SignInViewController") as! SignInViewController
+    (UIApplication.shared.delegate as? AppDelegate)?.window?.rootViewController = storyboard?.instantiateViewController(withIdentifier: "SignInViewController") as? SignInViewController
 }
 
 ```
