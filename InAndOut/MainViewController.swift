@@ -9,13 +9,13 @@
 import UIKit
 
 final class MainViewController: UIViewController {
-    @IBOutlet private weak var logo: UIImageView! = nil
-    @IBOutlet private weak var visitWebsiteButton: UIButton! = nil
-    @IBOutlet private weak var signOutButton: UIButton! = nil
+
+    @IBOutlet private weak var logo: UIImageView!
+    @IBOutlet private weak var visitWebsiteButton: UIButton!
+    @IBOutlet private weak var signOutButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         logo.alpha = 0
         visitWebsiteButton.alpha = 0
         signOutButton.alpha = 0
@@ -51,7 +51,8 @@ final class MainViewController: UIViewController {
 
     @IBAction func trySignOut() {
         AuthManager.signOut()
-        (UIApplication.shared.delegate as? AppDelegate)?.window?.rootViewController = storyboard?.instantiateViewController(withIdentifier: "SignInViewController") as? SignInViewController
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController = storyboard?.instantiateViewController(withIdentifier: "SignInViewController") as? SignInViewController
     }
 
     @IBAction func visitWebsite() {

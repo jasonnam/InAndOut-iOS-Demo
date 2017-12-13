@@ -9,18 +9,18 @@
 import Foundation
 
 final class AuthManager {
-    private static var userDefaults = UserDefaults.standard
+
     private static let signInKey = "SIGNIN"
 
-    class var signedIn: Bool {
-        return userDefaults.bool(forKey: signInKey)
+    static var signedIn: Bool {
+        return UserDefaults.standard.bool(forKey: signInKey)
     }
 
-    class func signIn() {
-        userDefaults.set(true, forKey: signInKey)
+    static func signIn() {
+        UserDefaults.standard.set(true, forKey: signInKey)
     }
 
-    class func signOut() {
-        userDefaults.set(false, forKey: signInKey)
+    static func signOut() {
+        UserDefaults.standard.set(false, forKey: signInKey)
     }
 }

@@ -10,11 +10,15 @@ import UIKit
 
 @UIApplicationMain
 final class AppDelegate: UIResponder, UIApplicationDelegate {
+
     var window: UIWindow?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         if !AuthManager.signedIn {
-            window?.rootViewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SignInViewController") as? SignInViewController
+            let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+            window?.rootViewController
+                = storyboard.instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
         }
 
         return true

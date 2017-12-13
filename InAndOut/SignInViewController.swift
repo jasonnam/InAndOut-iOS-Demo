@@ -9,14 +9,14 @@
 import UIKit
 
 final class SignInViewController: UIViewController {
-    @IBOutlet private weak var logoAlignCenterY: NSLayoutConstraint! = nil
-    @IBOutlet private weak var logoText: UILabel! = nil
-    @IBOutlet private weak var signInButton: UIButton! = nil
-    @IBOutlet private weak var signInIndicator: UIActivityIndicatorView! = nil
+
+    @IBOutlet private weak var logoAlignCenterY: NSLayoutConstraint!
+    @IBOutlet private weak var logoText: UILabel!
+    @IBOutlet private weak var signInButton: UIButton!
+    @IBOutlet private weak var signInIndicator: UIActivityIndicatorView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         logoText.alpha = 0
         signInButton.alpha = 0
     }
@@ -44,11 +44,16 @@ final class SignInViewController: UIViewController {
         signInButton.alpha = 0
         signInIndicator.startAnimating()
 
-        Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(SignInViewController.signInSucceeded), userInfo: nil, repeats: false)
+        Timer.scheduledTimer(timeInterval: 2,
+                             target: self,
+                             selector: #selector(signInSucceeded),
+                             userInfo: nil,
+                             repeats: false)
     }
 
-    func signInSucceeded() {
+    @objc func signInSucceeded() {
         AuthManager.signIn()
-        (UIApplication.shared.delegate as! AppDelegate).window?.rootViewController = storyboard?.instantiateInitialViewController() as! MainViewController
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController = storyboard?.instantiateInitialViewController() as! MainViewController
     }
 }
