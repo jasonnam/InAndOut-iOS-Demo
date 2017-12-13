@@ -9,6 +9,7 @@
 import UIKit
 
 extension UIViewAnimationCurve {
+
     var options: UIViewAnimationOptions {
         return UIViewAnimationOptions(rawValue: UInt(rawValue << 16))
     }
